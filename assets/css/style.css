@@ -1,0 +1,31 @@
+.form-group{
+    margin-left: 30%;
+}
+
+.directions{
+    font-size: 24px;
+}
+
+#generated-password{
+    font-size: 16px;
+    color: gray;
+}
+
+.box{
+    width: 500px;
+    height: 200px;
+    border: 1px dashed black;
+    position: relative;
+    margin-left: 33%;
+}
+
+#random-button{
+    margin-left: 525px;
+    margin-right: 100px;
+    background-color: red;
+}
+
+.btn_btn-secondary{
+    margin-right: 400px;
+    margin-left: 100px;
+}
