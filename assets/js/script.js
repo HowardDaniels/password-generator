@@ -13,17 +13,113 @@ var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var numerical = "0123456789";
 var special = "~`!@#$%^&*()-_+=[]{}|:;'<>,.?/";
-var all = uppercase + lowercase + numerical + special
+var all = uppercase + lowercase + numerical + special;
+var nospecialcharacters = uppercase + lowercase + numerical;
+var nonumbers = uppercase + lowercase + special;
+var nolowercase = uppercase + numerical + special;
+var nouppercase = lowercase + numerical + special;
+var onlyletters = lowercase + uppercase;
+var numbersandlowercase = lowercase + numerical;
+var specialandlowercase = lowercase + special;
+var numbersanduppercase = uppercase + numerical;
+var specialanduppercase = uppercase + special;
 generatedPassword = "";
-console.log(all);
+
+if ((specialCharacters == true) && (numbers == true) && (cases == true)) {
 
 for (i = 1; i < (parseInt(passwordLength) + 1); i++) {
 chargen = all.charAt(Math.floor(Math.random() * all.length));
 generatedPassword += chargen;
 }
+}
 
-console.log(all.length);
+else if ((specialCharacters == false) && (numbers == true) && (cases == true)) {
 
+for (i = 1; i < (parseInt(passwordLength) + 1); i++) {
+chargen = nospecialcharacters.charAt(Math.floor(Math.random() * nospecialcharacters.length));
+generatedPassword += chargen;
+}
+}
+
+else if ((specialCharacters == true) && (numbers == false) && (cases == true)) {
+
+for (i = 1; i < (parseInt(passwordLength) + 1); i++) {
+chargen = nonumbers.charAt(Math.floor(Math.random() * nonumbers.length));
+generatedPassword += chargen;
+}
+}
+
+else if ((specialCharacters == true) && (numbers == true) && (cases == false) && (whichcase == true)) {
+
+for (i = 1; i < (parseInt(passwordLength) + 1); i++) {
+chargen = nouppercase.charAt(Math.floor(Math.random() * nouppercase.length));
+generatedPassword += chargen;
+}
+}
+
+else if ((specialCharacters == true) && (numbers == true) && (cases == false) && (whichcase == false)) {
+
+for (i = 1; i < (parseInt(passwordLength) + 1); i++) {
+chargen = nolowercase.charAt(Math.floor(Math.random() * nolowercase.length));
+generatedPassword += chargen;
+}
+}
+
+else if ((specialCharacters == false) && (numbers == false) && (cases == true)) {
+
+for (i = 1; i < (parseInt(passwordLength) + 1); i++) {
+chargen = onlyletters.charAt(Math.floor(Math.random() * onlyletters.length));
+generatedPassword += chargen;
+}
+}
+
+else if ((specialCharacters == false) && (numbers == true) && (cases == false) && (whichcase == true)) {
+
+for (i = 1; i < (parseInt(passwordLength) + 1); i++) {
+chargen = numbersandlowercase.charAt(Math.floor(Math.random() * numbersandlowercase.length));
+generatedPassword += chargen;
+}
+}
+
+else if ((specialCharacters == false) && (numbers == true) && (cases == false) && (whichcase == false)) {
+
+  for (i = 1; i < (parseInt(passwordLength) + 1); i++) {
+  chargen = numbersanduppercase.charAt(Math.floor(Math.random() * numbersanduppercase.length));
+  generatedPassword += chargen;
+  }
+  }
+  
+else if ((specialCharacters == true) && (numbers == false) && (cases == false) && (whichcase == true)) {
+
+for (i = 1; i < (parseInt(passwordLength) + 1); i++) {
+chargen = specialandlowercase.charAt(Math.floor(Math.random() * specialandlowercase.length));
+generatedPassword += chargen;
+}
+}
+
+else if ((specialCharacters == true) && (numbers == false) && (cases == false) && (whichcase == false)) {
+
+  for (i = 1; i < (parseInt(passwordLength) + 1); i++) {
+  chargen = specialanduppercase.charAt(Math.floor(Math.random() * specialanduppercase.length));
+  generatedPassword += chargen;
+  }
+  }
+
+else if ((specialCharacters == false) && (numbers == false) && (cases == false) && (whichcase == true)) {
+
+  for (i = 1; i < (parseInt(passwordLength) + 1); i++) {
+    chargen = lowercase.charAt(Math.floor(Math.random() * lowercase.length));
+    generatedPassword += chargen;
+}
+}
+
+else if ((specialCharacters == false) && (numbers == false) && (cases == false) && (whichcase == false)) {
+
+  for (i = 1; i < (parseInt(passwordLength) + 1); i++) {
+  chargen = uppercase.charAt(Math.floor(Math.random() * uppercase.length));
+  generatedPassword += chargen;
+  }
+  }
 
 $(document).ready(function() {
 
@@ -34,9 +130,18 @@ $(document).ready(function() {
       var targetDiv = document.getElementById("generated-password");
       targetDiv.textContent = generatedPassword;
 
-      // ... and then dump the random number into our random-number div.
       $("#randombutton").text(generatedPassword);
 
     });
 
   });
+
+function copyPassword() {
+      
+  const el = document.createElement('textarea');
+  el.value = generatedPassword;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+};
