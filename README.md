@@ -18,7 +18,7 @@ Upon clicking the button "Generated Password", the password appears in the box, 
 
 The application is responsive at the max widths of 980px, 768px, and 640px.
 
-Github page link: https://howarddaniels.github.io/password-generator.html
+Github page link: https://howarddaniels.github.io/password-generator/
 Screenshot link: (in the assets/images folder): file:///C:/Users/hdani/Documents/bootcamp2019/Homework/password-generator/assets/images/screenshotofpasswordgenerator.png
 
 
