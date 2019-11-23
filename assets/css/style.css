@@ -1,31 +1,59 @@
-.form-group{
-    margin-left: 30%;
+.jumbotron{
+    padding-top: 200px;
+}
+
+#title{
+    position: relative;
+    margin: auto;
 }
 
 .directions{
-    font-size: 24px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px;
 }
 
 #generated-password{
     font-size: 16px;
     color: gray;
+    margin: 10px;
+    word-wrap: break-word;
 }
 
 .box{
     width: 500px;
-    height: 200px;
+    height: 300px;
     border: 1px dashed black;
     position: relative;
-    margin-left: 33%;
+    margin: auto;
+}
+
+.buttons{
+    position: relative;
+    margin: auto;
 }
 
 #random-button{
-    margin-left: 525px;
+    height: 50px;
+    width: auto;
     margin-right: 100px;
     background-color: red;
 }
 
 .btn_btn-secondary{
-    margin-right: 400px;
+    height: 50px;
+    width: auto;
     margin-left: 100px;
+}
+
+@media screen and (max-width: 980px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 640px) {
+
 }

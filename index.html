@@ -4,24 +4,31 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
+
     <body>
-<div class="jumbotron">
-
-        <h1 class="text-center">Password Generator</h1>
-        <div class="row">
-            <div class="box">
-                <div class="directions">Generate a password.</div>
-                <br>
-                <hr>
-                            <h1 class="text-center" id="generated-password">Your Secure Password</h1>
+        <div class="jumbotron">
+            <div class="row">
+                <h1 class="text-center" id="title">Password Generator</h1>
             </div>
-        </div>
-        <br>
-        <button type="button" class="btn btn-primary" id="random-button">Generate Password</button>
-        <button type="button" class="btn btn-secondary" id="copy-button" onclick="copyPassword()">Copy to Clipboard</button>
-    
-      </div>
-
+            <br>
+            <div class="row">
+                <div class="box">
+                    <div class="directions">To generate a password, follow the prompts to specify the length of and the kind of characters in your password. 
+                    To improve password strength, it is recommended to have a long password with a variety of character types. 
+                    Once you have determined the length and character types of your password, press "Generate Password" to view your generated password, 
+                    and "Copy to Clipboard" to copy that password to your clipboard.</div>
+                    <br>
+                    <hr>
+                    <h1 class="text-center" id="generated-password">Your Secure Password</h1>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="buttons">
+                    <button type="button" class="btn btn-primary" id="random-button">Generate Password</button>
+                    <button type="button" class="btn btn-secondary" id="copy-button" onclick="copyPassword()">Copy to Clipboard</button>
+                </div>
+            </div>
 
         <script src="assets/js/script.js"></script>
     </body>
